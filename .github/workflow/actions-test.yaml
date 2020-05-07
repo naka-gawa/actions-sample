@@ -1,0 +1,16 @@
+name: ci/docker Build and Push
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  slack-notif:
+    runs-on: ubuntu-latest
+    steps:
+      # 必須
+      - uses: actions/checkout@master
+
+      - name: Build and Push
+        uses: naka-gawa/image_assembly_line_dev@master
