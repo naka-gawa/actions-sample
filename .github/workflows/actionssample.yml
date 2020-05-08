@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Build and Push
-        uses: naka-gawa/image_assembly_line_dev@develop
+        uses: naka-gawa/image_assembly_line@develop
         with:
           image_name: tmnakagawa/actions-example
           target: build
