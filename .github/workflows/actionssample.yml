@@ -1,16 +1,28 @@
+# Dockerfileのある場所など分かる名前とWorkflowで行う内容
 name: ci/docker Build and Push
 
+# Workflowが動くタイミング
+# 以下のタイミングは追加してください
 on:
   push:
     branches:
       - master
 
+env:
+  REGISTRY_NAME: 167855287371.dkr.ecr.ap-northeast-1.amazonaws.com
+  IMAGE_NAME: tmnakagawa/actions-example
+  # devは他の処理でも使う予定があるので必ず指定してください
+  BUILD_TAG: dev
+
 jobs:
-  slack-notif:
-    runs-on: ubuntu-latest
+  build_flow:
+    runs-on: self-hosted
     steps:
       # 必須
       - uses: actions/checkout@master
 
       - name: Build and Push
-        uses: naka-gawa/image_assembly_line_dev@master
+        uses: naka-gawa/image_assembly_line_dev@develop
+        with:
+          image_name: tmnakagawa/actions-example
+          target: build
