@@ -5,7 +5,7 @@ name: ci/docker Build and Push
 # 以下のタイミングは追加してください
 on:
   schedule:
-    - cron:  '*/5 * * * *'
+    - cron:  '*/15 * * * *'
 
 env:
   REGISTRY_NAME: 167855287371.dkr.ecr.ap-northeast-1.amazonaws.com
