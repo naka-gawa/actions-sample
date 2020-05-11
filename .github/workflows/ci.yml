@@ -26,5 +26,3 @@ jobs:
         with:
           image_name: tmnakagawa/actions-example
           target: build
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
