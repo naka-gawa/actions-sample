@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Build and Push
-        uses: naka-gawa/image_assembly_line@develop
+        uses: naka-gawa/image_assembly_line@add_slack_notfiy
         with:
           image_name: tmnakagawa/actions-example
           target: build
