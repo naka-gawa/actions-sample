@@ -1,0 +1,11 @@
+name: rw_dump
+on:
+  push:
+    branches:
+      - master
+jobs:
+  dump:
+    runs-on: rw
+    steps:
+      - name: output hostname
+        run: hostname
