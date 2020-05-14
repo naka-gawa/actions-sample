@@ -1,0 +1,11 @@
+name: ro_dump
+on:
+  push:
+    branches:
+      - master
+jobs:
+  dump:
+    runs-on: ro
+    steps:
+      - name: output hostname
+        run: hostname
