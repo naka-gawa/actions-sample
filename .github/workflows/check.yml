@@ -1,0 +1,11 @@
+name: check
+on:
+  push:
+    branches:
+      - master
+jobs:
+  rodump:
+    runs-on: self-hosted
+    steps:
+      - name: output hostname
+        run: hostname
