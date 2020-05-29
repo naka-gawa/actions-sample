@@ -5,12 +5,10 @@ on:
       - master
 jobs:
   rodump:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: chekout
         uses: actions/checkout@master
-      - name: assembly_line
-        uses: C-FO/image_assembly_line@add-scan-exit-code-input
-        with:
-          image_name: build-image/app
-          no_push: true
+      - name: test
+        run: |
+          echo "Hello World!"
