@@ -4,7 +4,7 @@ on:
     branches:
       - master
 jobs:
-  rodump:
+  default:
     runs-on: ubuntu-latest
     steps:
       - name: chekout
